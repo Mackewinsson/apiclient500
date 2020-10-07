@@ -1,0 +1,20 @@
+type Clients {
+  _id: ID!
+  url: String
+  titulo: String
+  precio: String
+  titular: String
+  region: String
+  comuna: String
+  telefono: String
+  telefonoLink: String
+  codigo: ID
+  descripcion: String
+}
+
+type Query {
+  "Devuelve todos los clientes"
+  getClients: [Clients]
+  "Devuelve un cliente"
+  getClient(id: ID!): Clients
+}
